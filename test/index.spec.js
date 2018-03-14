@@ -4,7 +4,7 @@ import path from 'path';
 import { expect } from 'chai';
 import { importCost as runner, cleanup, JAVASCRIPT, TYPESCRIPT } from '../src';
 import { clearSizeCache, cacheFileName } from '../src/packageInfo';
-import {isMUI } from '../src/utils';
+import { isMUI } from '../src/utils';
 import { DebounceError } from '../src/debouncePromise';
 
 const workingFolder = typeof wallaby !== 'undefined' ? path.join(wallaby.localProjectDir, 'test') : __dirname;
@@ -32,7 +32,7 @@ function whenDone(emitter) {
 
 function importCost(fileName, language = undefined) {
   language = language ? language : fileName.match('.js') ? JAVASCRIPT : TYPESCRIPT;
-  return runner(fileName, isMUI(fileName) ? fileName: fs.readFileSync(fileName, 'utf-8'), language);
+  return runner(fileName, fs.readFileSync(fileName, 'utf-8'), language);
 }
 
 function sizeOf(packages, name) {
@@ -45,9 +45,9 @@ function gzipOf(packages, name) {
 
 async function test(fileName, pkg = 'chai', minSize = 10000, maxSize = 15000) {
 
-  const packages = await whenDone(importCost(isMUI(fileName) ? fileName : fixture(fileName)));
-  console.log(packages)
-  console.log(packages[0].size)
+  const packages = await whenDone(importCost(fixture(fileName)));
+  // console.log(packages)
+  // console.log(packages[0].size)
   expect(sizeOf(packages, pkg)).to.be.within(minSize, maxSize);
   expect(gzipOf(packages, pkg)).to.be.within(sizeOf(packages, pkg) / 50, sizeOf(packages, pkg) / 1.5);
 }
@@ -71,7 +71,7 @@ describe('importCost', () => {
   // });
 
   it('calculates size of require in javascript', () => test('require.js'));
-  it('calculates size of require in javascript', () => test('/mui/feloader/4.1.16/feloader-min.js'));
+  it('calculates size of require in javascript', () => test('mui.js'));
   // it('calculates size of require in typescript', () => test('require.ts'));
   // it('calculates size of template require in javascript', () => test('require-template.js'));
   // it('calculates size of template require in typescript', () => test('require-template.ts'));

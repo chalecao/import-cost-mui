@@ -13,20 +13,24 @@ export function cleanup() {
 export function importCost(fileName, text, language) {
   const emitter = new EventEmitter();
   setTimeout(async () => {
-    if (isMUI(fileName)) {
-      emitter.emit('start', [fileName]);
-      emitter.emit('calculated', [fileName]);
-      let packages = [await getSize({ "string": fileName })]
-      emitter.emit('done', packages);
-    }
-    try {
 
+    try {
       const imports = getPackages(fileName, text, language)
-        .filter(packageInfo => !packageInfo.name.startsWith('.'));
+      // .filter(packageInfo => !packageInfo.name.startsWith('.'));
 
       emitter.emit('start', imports);
+
+
       const promises = imports
-        .map(packageInfo => getSize(packageInfo))
+        .map(packageInfo => {
+
+          if (isMUI(packageInfo.name)) {
+
+            return getSize({ "string": packageInfo.name })
+          } else {
+            return getSize(packageInfo)
+          }
+        })
         .map(promise =>
           promise.then(packageInfo => {
             emitter.emit('calculated', packageInfo);
