@@ -6,7 +6,7 @@ const tmp = require('tmp');
 const fs = require('fs');
 const path = require('path');
 const {gzipSync} = require('zlib');
-const {getPackageJson} = require('./utils');
+const {getPackageJson} = require('./utils2');
 
 function getEntryPoint(packageInfo) {
   const tmpFile = tmp.fileSync();
@@ -77,5 +77,6 @@ function calcSize(packageInfo, callback) {
     }
   });
 }
+
 
 module.exports = {calcSize};

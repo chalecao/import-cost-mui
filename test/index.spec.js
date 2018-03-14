@@ -46,10 +46,10 @@ function gzipOf(packages, name) {
 async function test(fileName, pkg = 'chai', minSize = 10000, maxSize = 15000) {
 
   const packages = await whenDone(importCost(isMUI(fileName) ? fileName : fixture(fileName)));
-  // console.log(packages)
-  // console.log(packages[0].size)
-  // expect(sizeOf(packages, pkg)).to.be.within(minSize, maxSize);
-  // expect(gzipOf(packages, pkg)).to.be.within(sizeOf(packages, pkg) / 50, sizeOf(packages, pkg) / 1.5);
+  console.log(packages)
+  console.log(packages[0].size)
+  expect(sizeOf(packages, pkg)).to.be.within(minSize, maxSize);
+  expect(gzipOf(packages, pkg)).to.be.within(sizeOf(packages, pkg) / 50, sizeOf(packages, pkg) / 1.5);
 }
 
 async function timed(fn) {
