@@ -1,14 +1,14 @@
 {
   "private": false,
   "name": "import-cost-mui",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "dist/src/index.js",
   "files": [
     "src",
     "dist"
   ],
-  "seed":"test",
+  "seed": "test",
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"
