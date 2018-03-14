@@ -7,6 +7,11 @@ export function parseJson(dir) {
   return JSON.parse(fs.readFileSync(pkg, 'utf-8'));
 }
 
+export function parseSeedJson(dir) {
+  const pkg = path.join(dir, 'seed.json');
+  return JSON.parse(fs.readFileSync(pkg, 'utf-8'));
+}
+
 function getPackageName(pkg) {
   const pkgParts = pkg.name.split('/');
   let pkgName = pkgParts.shift();
@@ -30,5 +35,5 @@ export function getPackageJson(pkg) {
 }
 
 export function isMUI(fileName){
-  return fileName.match("/mui")
+  return fileName.match("mui")
 }

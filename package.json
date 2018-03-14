@@ -8,6 +8,7 @@
     "src",
     "dist"
   ],
+  "seed":"test",
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"

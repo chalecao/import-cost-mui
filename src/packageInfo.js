@@ -4,20 +4,29 @@ import http from "http"
 import workerFarm from 'worker-farm';
 import pkgDir from 'pkg-dir';
 import { debouncePromise, DebounceError } from './debouncePromise';
-import { getPackageVersion, parseJson, isMUI } from './utils';
+import { getPackageVersion, parseJson, isMUI, parseSeedJson } from './utils';
 
 const workers = workerFarm(require.resolve('./webpack.js'), ['calcSize']);
 const extensionVersion = parseJson(pkgDir.sync(__dirname)).version;
+const solutionDir = parseJson(pkgDir.sync(__dirname))["seed"];
+
+const seed = parseSeedJson(path.join(pkgDir.sync(__dirname), solutionDir || "src"))
+
+
 export const cacheFileName = path.join(__dirname, `ic-cache-${extensionVersion}`);
 let sizeCache = {};
 const versionsCache = {};
 const failedSize = { size: 0, gzip: 0 };
 
 function getMuiSize(fileName, name, line) {
+  let pack = name.split("/")
+
+  pack.splice(2, 0, seed.packages["mui/" + pack[1]]["version"])
+  // console.log(pack.join("/"))
   return new Promise((resolve, reject) => {
     http.get({
       host: 'g.alicdn.com',
-      path: name
+      path: "/" + pack.join("/")
     }, function (response) {
 
       resolve({

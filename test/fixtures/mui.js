@@ -1,2 +1,2 @@
-const aaa = require('/mui/feloader/4.1.16/feloader-min.js');
+const aaa = require('mui/feloader/feloader-min.js');
 console.log(aaa);

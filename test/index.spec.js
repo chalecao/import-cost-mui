@@ -71,7 +71,7 @@ describe('importCost', () => {
   // });
 
   it('calculates size of require in javascript', () => test('require.js'));
-  it('calculates size of require in javascript', () => test('mui.js','/mui/feloader/4.1.16/feloader-min.js'));
+  it('calculates size of require in javascript', () => test('mui.js','mui/feloader/feloader-min.js'));
   // it('calculates size of require in typescript', () => test('require.ts'));
   // it('calculates size of template require in javascript', () => test('require-template.js'));
   // it('calculates size of template require in typescript', () => test('require-template.ts'));
