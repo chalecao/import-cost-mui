@@ -8,9 +8,9 @@ import { getPackageVersion, parseJson, isMUI, parseSeedJson } from './utils';
 
 const workers = workerFarm(require.resolve('./webpack.js'), ['calcSize']);
 const extensionVersion = parseJson(pkgDir.sync(__dirname)).version;
-const solutionDir = parseJson(pkgDir.sync(__dirname))["seed"];
 
-const seed = parseSeedJson(path.join(pkgDir.sync(__dirname), solutionDir || "src"))
+const solutionDir = parseJson(__dirname)["seed"];
+const seed = parseSeedJson(path.join(__dirname, solutionDir || "src"))
 
 
 export const cacheFileName = path.join(__dirname, `ic-cache-${extensionVersion}`);
