@@ -25,7 +25,7 @@ export function importCost(fileName, text, language) {
       const promises = imports
         .map(packageInfo => {
 
-          let uitype = parseJson(pkgDir.sync(fileName))["uitype"];
+          let uitype = parseJson(pkgDir.sync(fileName))["uitype"] || "mui,tm";
           let _type = isMUI(packageInfo.name, uitype)
           // console.log(uitype)
           if (_type) {

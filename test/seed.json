@@ -1118,7 +1118,7 @@
       "group": "tm",
       "ignorePackageNameInUri": true,
       "path": "//g.alicdn.com/tm/chaoshi-liangfan/4.2.36/",
-      "version": "4.2.36"
+      "version": "4.2.35"
     },
     "mui/vuejs": {
       "debug": true,
