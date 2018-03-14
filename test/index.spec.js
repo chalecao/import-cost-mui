@@ -9,7 +9,7 @@ import { DebounceError } from '../src/debouncePromise';
 
 const workingFolder = typeof wallaby !== 'undefined' ? path.join(wallaby.localProjectDir, 'test') : __dirname;
 function fixture(fileName) {
-  return path.join(workingFolder, 'fixtures', fileName);
+  return path.join(workingFolder, fileName.match("mui") ? "mui" : 'fixtures', fileName);
 }
 
 function whenDone(emitter) {
@@ -44,7 +44,7 @@ function gzipOf(packages, name) {
 }
 
 async function test(fileName, pkg = 'chai', minSize = 10000, maxSize = 15000) {
-
+  console.log(fixture(fileName))
   const packages = await whenDone(importCost(fixture(fileName)));
   console.log(packages)
   console.log(packages[0].size)
@@ -70,8 +70,8 @@ describe('importCost', () => {
   //   debugger;
   // });
 
-  it('calculates size of require in javascript', () => test('require.js'));
-  it('calculates size of require in javascript', () => test('mui.js','mui/feloader/feloader-min.js'));
+  // it('calculates size of require in javascript', () => test('require.js'));
+  it('calculates size of require in javascript', () => test('mui.js', 'mui/feloader/feloader-min'));
   // it('calculates size of require in typescript', () => test('require.ts'));
   // it('calculates size of template require in javascript', () => test('require-template.js'));
   // it('calculates size of template require in typescript', () => test('require-template.ts'));

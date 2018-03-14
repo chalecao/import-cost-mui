@@ -1,0 +1,1207 @@
+{
+  "modules": {
+    "hybrid/plugin/ar": {
+      "requires": [
+        "mui/hybrid/index"
+      ]
+    },
+    "hybrid/plugin/blockNativeBack": {
+      "requires": [
+        "mui/hybrid/index"
+      ]
+    },
+    "hybrid/plugin/blow": {
+      "requires": [
+        "mui/hybrid/index"
+      ]
+    },
+    "hybrid/plugin/nativeRequest": {
+      "requires": [
+        "mui/hybrid/index"
+      ]
+    },
+    "hybrid/plugin/pageVisibility": {
+      "requires": [
+        "mui/hybrid/index"
+      ]
+    },
+    "hybrid/plugin/plugin": {
+      "requires": [
+        "mui/hybrid/index"
+      ]
+    },
+    "hybrid/plugin/seed": {
+      "requires": [
+        "mui/hybrid/index"
+      ]
+    },
+    "hybrid/plugin/sku": {
+      "requires": [
+        "mui/hybrid/index"
+      ]
+    },
+    "mui/chaoshi-ald/index": {
+      "requires": [
+        "mui/mtop/index",
+        "mui/custom-event/index",
+        "mui/chaoshi-app/site-info"
+      ]
+    },
+    "mui/chaoshi-app/city-code": {
+      "requires": [
+        "mui/babel-polyfill/index"
+      ]
+    },
+    "mui/chaoshi-app/oc": {
+      "requires": [
+        "mui/mtop/index",
+        "./site-info"
+      ]
+    },
+    "mui/chaoshi-app/site-info": {
+      "requires": [
+        "mui/babel-polyfill/index"
+      ]
+    },
+    "mui/chaoshi-app/user-info": {
+      "requires": [
+        "mui/babel-polyfill/index",
+        "mui/mtop/index"
+      ]
+    },
+    "mui/chaoshi-city-selector/city-list": {
+      "requires": [
+        "mui/mtop/index"
+      ]
+    },
+    "mui/chaoshi-city-selector/index": {
+      "requires": [
+        "mui/prompt/indicator/index",
+        "mui/city-selector/selector",
+        "mui/chaoshi-app/site-info",
+        "./set-city",
+        "./city-list",
+        "mui/mtop/index"
+      ]
+    },
+    "mui/chaoshi-city-selector/set-city": {
+      "requires": [
+        "mui/fetch/jsonp",
+        "mui/hybrid/index"
+      ]
+    },
+    "mui/chaoshi-sync/index": {
+      "requires": [
+        "./inventory-act",
+        "./price-inventory"
+      ]
+    },
+    "mui/chaoshi-sync/index-pc": {
+      "requires": [
+        "./index"
+      ]
+    },
+    "mui/chaoshi-sync/inventory-act": {
+      "requires": [
+        "./util",
+        "mui/mtop/index",
+        "mui/chaoshi-app/site-info",
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/chaoshi-sync/price-inventory": {
+      "requires": [
+        "./util",
+        "mui/mtop/index",
+        "mui/chaoshi-app/site-info",
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/city-selector/divisionchild.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/city-selector/gps": {
+      "requires": [
+        "mui/hybrid/index"
+      ]
+    },
+    "mui/city-selector/index": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/zepto/event",
+        "mui/cover/sliding-menu/index",
+        "mui/city-selector/index.xtpl",
+        "mui/prompt/indicator/index",
+        "mui/custom-event/index",
+        "mui/city-selector/index.css"
+      ]
+    },
+    "mui/city-selector/index-native.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/city-selector/index.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/city-selector/letterbar.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/city-selector/selector": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/zepto/event",
+        "mui/zepto/touch",
+        "mui/cover/sliding-menu/index",
+        "mui/city-selector/selector.xtpl",
+        "mui/city-selector/letterbar.xtpl",
+        "mui/prompt/indicator/index",
+        "mui/custom-event/index",
+        "mui/city-selector/selector.css",
+        "mui/babel-polyfill/index"
+      ]
+    },
+    "mui/city-selector/selector.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/city-selector/weex/weex": {
+      "requires": [
+        "mui/weex-zebra-utils/index-native"
+      ]
+    },
+    "mui/cover/index": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/custom-event/index",
+        "mui/cover/index.css"
+      ]
+    },
+    "mui/cover/sliding-menu/index": {
+      "requires": [
+        "mui/zepto/event",
+        "mui/cover/index",
+        "mui/cover/sliding-menu/index.css"
+      ]
+    },
+    "mui/crossimage/index": {
+      "requires": [
+        "mui/babel-polyfill/index",
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/datalazyload/index": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/zepto/event"
+      ]
+    },
+    "mui/dialog/index": {
+      "requires": [
+        "./index.css",
+        "mui/zepto/touch"
+      ]
+    },
+    "mui/fetch/fetch": {
+      "requires": [
+        "mui/babel-polyfill/index"
+      ]
+    },
+    "mui/fetch/iframePostForm": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/fetch/jsonp": {
+      "requires": [
+        "mui/fetch/fetch",
+        "mui/fetch/tool"
+      ]
+    },
+    "mui/h2-dialog/index": {
+      "requires": [
+        "mui/h2-dialog/index.css"
+      ]
+    },
+    "mui/h2-swiper/index": {
+      "requires": [
+        "mui/h2-swiper/index.css"
+      ]
+    },
+    "mui/h2-swiper/plugins/pagination": {
+      "requires": [
+        "mui/h2-swiper/plugins/pagination.css"
+      ]
+    },
+    "mui/h2-tabbar/index": {
+      "requires": [
+        "mui/h2-tabbar/index.css"
+      ]
+    },
+    "mui/h2-tabs/index": {
+      "requires": [
+        "mui/h2-tabs/index.css"
+      ]
+    },
+    "mui/h2-tabview/index": {
+      "requires": [
+        "mui/h2-tabs/index",
+        "mui/h2-swiper/index",
+        "mui/h2-tabview/index.css"
+      ]
+    },
+    "mui/h2-toast/index": {
+      "requires": [
+        "mui/h2-toast/index.css"
+      ]
+    },
+    "mui/login/index": {
+      "requires": [
+        "mui/cookie-pass/index",
+        "mui/zepto/touch",
+        "./util.js"
+      ]
+    },
+    "mui/login/index.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/minilogin/index": {
+      "requires": [
+        "mui/popbox/index-pc.css",
+        "./index.css",
+        "mui/popbox/index-pc",
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/minilogin/index.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/mtb-login/index.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/mtop/index": {
+      "requires": [
+        "mui/mtb-windvane/",
+        "mui/babel-polyfill/"
+      ]
+    },
+    "mui/mtop/storage-middleware": {
+      "requires": [
+        "mui/babel-polyfill/"
+      ]
+    },
+    "mui/popbox/index": {
+      "requires": [
+        "mui/custom-event/index",
+        "mui/zepto/event",
+        "mui/popbox/index.css",
+        "mui/babel-polyfill/"
+      ]
+    },
+    "mui/popbox/index-pc": {
+      "requires": [
+        "mui/custom-event/index",
+        "mui/zepto/event",
+        "mui/popbox/index-pc.css",
+        "mui/babel-polyfill/"
+      ]
+    },
+    "mui/prompt/indicator/index": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/prompt/css/loading.css",
+        "mui/prompt/css/indicator/index.css"
+      ]
+    },
+    "mui/prompt/loading": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/custom-event/index"
+      ]
+    },
+    "mui/quickbuy/mui": {
+      "requires": [
+        "mui/zepto/event"
+      ]
+    },
+    "mui/smart-jump/index": {
+      "requires": [
+        "mui/smart-jump/index.css",
+        "mui/zepto/touch",
+        "mui/fetch/jsonp",
+        "mui/crossimage/"
+      ]
+    },
+    "mui/smart-jump/index-native": {
+      "requires": [
+        "mui/weex-zebra-utils/index-native"
+      ]
+    },
+    "mui/tinycart/auto": {
+      "requires": [
+        "mui/zepto/touch",
+        "./index",
+        "mui/zepto/event"
+      ]
+    },
+    "mui/tinycart/index": {
+      "requires": [
+        "./index.css",
+        "mui/zepto/zepto",
+        "mui/custom-event/index",
+        "./lib/model",
+        "mui/h2-activity-indicator/tmall"
+      ]
+    },
+    "mui/tinycart/lib/animation": {
+      "requires": [
+        "mui/custom-event/index",
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/tinycart/lib/model": {
+      "requires": [
+        "mui/mtb-windvane/index",
+        "mui/custom-event/index",
+        "mui/zepto/zepto",
+        "mui/mtop/index"
+      ]
+    },
+    "mui/vuejs/index": {
+      "requires": [
+        "mui/vuejs/runtime.js",
+        "mui/vuejs/render.js"
+      ]
+    },
+    "mui/vuejs/render": {
+      "requires": [
+        "mui/babel-polyfill/index",
+        "mui/mtop/index",
+        "mui/mtb-windvane/index",
+        "mui/mtb-login/index"
+      ]
+    },
+    "mui/weex-component-link/index": {
+      "requires": [
+        "mui/weex-zebra-utils/index"
+      ]
+    },
+    "mui/weex-component-link/index-native": {
+      "requires": [
+        "mui/weex-zebra-utils/index-native"
+      ]
+    },
+    "mui/xtemplate/compiler": {
+      "requires": [
+        "./runtime",
+        "./compiler/tools",
+        "./compiler/parser",
+        "./compiler/ast"
+      ]
+    },
+    "mui/xtemplate/index": {
+      "requires": [
+        "./runtime",
+        "./compiler"
+      ]
+    },
+    "mui/xtemplate/runtime": {
+      "requires": [
+        "./runtime/util",
+        "./runtime/commands",
+        "./runtime/scope",
+        "./runtime/linked-buffer"
+      ]
+    },
+    "mui/xtemplate/runtime/commands": {
+      "requires": [
+        "./scope",
+        "./util"
+      ]
+    },
+    "mui/xtemplate/runtime/linked-buffer": {
+      "requires": [
+        "./util"
+      ]
+    },
+    "mui/xtemplate/runtime/util": {
+      "requires": [
+        "./escape-html"
+      ]
+    },
+    "mui/zebra-act-newbanner-th/index": {
+      "requires": [
+        "mui/kissy-polyfill/",
+        "mui/zepto/event",
+        "mui/datalazyload/index",
+        "mui/fetch/jsonp",
+        "mui/mtop/index"
+      ]
+    },
+    "mui/zebra-act-newbanner-th/index-vue": {
+      "requires": [
+        "mui/vuejs/index",
+        "mui/weex-vue-patch/index",
+        "mui/weex-zebra-utils/index",
+        "mui/weex-component-link/index",
+        "mui/vuejs/runtime",
+        "mui/vuejs/render"
+      ]
+    },
+    "mui/zebra-act-newbanner-th/weex/weex": {
+      "requires": [
+        "mui/vuejs/index-native",
+        "mui/weex-vue-patch/index-native",
+        "mui/weex-zebra-utils/index-native",
+        "mui/weex-component-link/index-native"
+      ]
+    },
+    "mui/zebra-aself-one/1yuan/banner.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/1yuan/fail.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/1yuan/get.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/1yuan/index": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/zepto/touch",
+        "./banner.tpl",
+        "./banner.css",
+        "mui/mtop/index",
+        "mui/h2-activity-indicator/tmall",
+        "./get.tpl",
+        "./fail.tpl",
+        "mui/crossimage/",
+        "mui/moment/index"
+      ]
+    },
+    "mui/zebra-aself-one/1yuan/init": {
+      "requires": [
+        "mui/mtop/index"
+      ]
+    },
+    "mui/zebra-aself-one/aself/banner.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/aself/couponList.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/aself/fail.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/aself/index": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/zepto/touch",
+        "./banner.tpl",
+        "./banner.css",
+        "mui/mtop/index",
+        "mui/h2-activity-indicator/tmall",
+        "./couponList.tpl",
+        "./fail.tpl",
+        "mui/crossimage/",
+        "mui/moment/index"
+      ]
+    },
+    "mui/zebra-aself-one/index": {
+      "requires": [
+        "mui/zepto/zepto",
+        "./init"
+      ]
+    },
+    "mui/zebra-aself-one/index-pc": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zebra-aself-one/init": {
+      "requires": [
+        "mui/mtop/index"
+      ]
+    },
+    "mui/zebra-aself-one/s1o/banner.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/s1o/get.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/s1o/gift.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/s1o/index": {
+      "requires": [
+        "mui/chaoshi-app/site-info",
+        "mui/chaoshi-app/user-info",
+        "mui/h2-tabbar/index",
+        "mui/tinycart/",
+        "mui/zepto/zepto",
+        "mui/zepto/touch",
+        "./banner.tpl",
+        "./get.tpl",
+        "./gift.tpl",
+        "./banner.css",
+        "mui/mtop/index",
+        "mui/h2-activity-indicator/tmall",
+        "mui/h2-dialog/",
+        "mui/crossimage/",
+        "mui/moment/"
+      ]
+    },
+    "mui/zebra-aself-one/s1o/is": {
+      "requires": [
+        "mui/mtop/index",
+        "mui/chaoshi-app/site-info",
+        "mui/chaoshi-app/user-info",
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zebra-aself-one/tabs/banner.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/tabs/fail.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/tabs/float.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/tabs/index": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/zepto/touch",
+        "./banner.tpl",
+        "./banner.css",
+        "mui/mtop/index",
+        "mui/h2-activity-indicator/tmall",
+        "mui/crossimage/",
+        "mui/moment/index",
+        "./fail.tpl"
+      ]
+    },
+    "mui/zebra-aself-one/tabs/tabs": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/zepto/touch",
+        "mui/moment/index",
+        "./tabs.tpl",
+        "./float.tpl",
+        "mui/crossimage/",
+        "./tabs.css",
+        "./float.css",
+        "./banner.css"
+      ]
+    },
+    "mui/zebra-aself-one/tabs/tabs.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-aself-one/weex/_weex": {
+      "requires": [
+        "mui/vuejs/index-native",
+        "mui/weex-vue-patch/index-native",
+        "mui/weex-zebra-utils/index-native",
+        "mui/weex-component-link/index-native"
+      ]
+    },
+    "mui/zebra-bf-login/banner.tpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-bf-login/index": {
+      "requires": [
+        "mui/zepto/event",
+        "mui/mtop/index",
+        "mui/login/index",
+        "./banner.tpl",
+        "mui/hybrid/",
+        "./index.css"
+      ]
+    },
+    "mui/zebra-bf-login/index-pc": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/dot.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/error.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/error_s.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/index": {
+      "requires": [
+        "mui/kissy-polyfill/index",
+        "mui/zepto/zepto",
+        "mui/zepto/touch",
+        "./welcome.xtpl",
+        "./success.xtpl",
+        "./error.xtpl",
+        "./welcome_s.xtpl",
+        "./success_s.xtpl",
+        "./error_s.xtpl",
+        "./dot.xtpl",
+        "mui/prompt/indicator/index",
+        "mui/popbox/index",
+        "mui/moment/index",
+        "mui/mtop/index",
+        "mui/login/",
+        "mui/hybrid/index",
+        "./uab.js"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/index-pc": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/index-pc.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/index.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/success.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/success_s.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/welcome.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zebra-jinkou-common-coupon/welcome_s.xtpl": {
+      "requires": [
+        "mui/xtemplate/runtime"
+      ]
+    },
+    "mui/zepto/event": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zepto/form": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zepto/fx": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zepto/fx_methods": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/zepto/fx"
+      ]
+    },
+    "mui/zepto/gesture": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zepto/ie": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zepto/selector": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zepto/stack": {
+      "requires": [
+        "mui/zepto/zepto"
+      ]
+    },
+    "mui/zepto/touch": {
+      "requires": [
+        "mui/zepto/zepto",
+        "mui/zepto/event"
+      ]
+    },
+    "zebra-pages/city-pavilion/main": {
+      "requires": [
+        "mui/zepto/touch",
+        "mui/chaoshi-ald/index",
+        "mui/mtop/index",
+        "mui/h2-lazyload/index",
+        "mui/crossimage/index",
+        "mui/zebra-fcvd/all",
+        "mui/crossimage/",
+        "mui/h2-toast/index",
+        "mui/h2-sticky/index",
+        "mui/h2-gesture/index",
+        "mui/h2-activity-indicator/tmall",
+        "mui/chaoshi-app/site-info",
+        "mui/h2-tabview/index"
+      ]
+    },
+    "zebra-pages/city-pavilion/second": {
+      "requires": [
+        "mui/zepto/touch",
+        "mui/h2-gesture/index",
+        "mui/mtop/index",
+        "mui/h2-lazyload/index",
+        "mui/crossimage/index",
+        "mui/tinycart/auto",
+        "mui/chaoshi-app/site-info"
+      ]
+    }
+  },
+  "packages": {
+    "hybrid/plugin": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/hybrid/plugin/4.0.10/",
+      "version": "4.0.10"
+    },
+    "kissy": {
+      "base": "//g.alicdn.com/kissy/k/1.4.16/",
+      "version": "1.4.16"
+    },
+    "mui/babel-polyfill": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/babel-polyfill/6.2.6/",
+      "version": "6.2.6"
+    },
+    "mui/chaoshi-ald": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/chaoshi-ald/4.1.17/",
+      "version": "4.1.17"
+    },
+    "mui/chaoshi-app": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/chaoshi-app/4.0.26/",
+      "version": "4.0.26"
+    },
+    "mui/chaoshi-city-selector": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/chaoshi-city-selector/4.0.28/",
+      "version": "4.0.28"
+    },
+    "mui/chaoshi-sync": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/chaoshi-sync/4.1.10/",
+      "version": "4.1.10"
+    },
+    "mui/city-selector": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "isVue": true,
+      "path": "//g.alicdn.com/mui/city-selector/4.2.19/",
+      "version": "4.2.19",
+      "weex": true
+    },
+    "mui/cookie": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/cookie/4.1.0/",
+      "version": "4.1.0"
+    },
+    "mui/cookie-pass": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/cookie-pass/4.0.2/",
+      "version": "4.0.2"
+    },
+    "mui/cover": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/cover/4.0.3/",
+      "version": "4.0.3"
+    },
+    "mui/crossimage": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/crossimage/4.1.30/",
+      "version": "4.1.30"
+    },
+    "mui/custom-event": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/custom-event/4.0.3/",
+      "version": "4.0.3"
+    },
+    "mui/datalazyload": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/datalazyload/4.0.23/",
+      "version": "4.0.23"
+    },
+    "mui/dialog": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/dialog/4.0.5/",
+      "version": "4.0.5"
+    },
+    "mui/feloader": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/feloader/4.0.39/",
+      "version": "4.0.39"
+    },
+    "mui/fetch": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/fetch/4.1.12/",
+      "version": "4.1.12"
+    },
+    "mui/h2-activity-indicator": {
+      "base": "//g.alicdn.com/mui/h2-activity-indicator/4.0.5/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.0.5"
+    },
+    "mui/h2-dialog": {
+      "base": "//g.alicdn.com/mui/h2-dialog/4.1.3/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.1.3"
+    },
+    "mui/h2-gesture": {
+      "base": "//g.alicdn.com/mui/h2-gesture/4.0.2/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.0.2"
+    },
+    "mui/h2-lazyload": {
+      "base": "//g.alicdn.com/mui/h2-lazyload/4.0.24/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.0.24"
+    },
+    "mui/h2-sticky": {
+      "base": "//g.alicdn.com/mui/h2-sticky/4.0.4/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.0.4"
+    },
+    "mui/h2-swiper": {
+      "base": "//g.alicdn.com/mui/h2-swiper/4.0.32/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.0.32"
+    },
+    "mui/h2-tabbar": {
+      "base": "//g.alicdn.com/mui/h2-tabbar/4.1.6/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.1.6"
+    },
+    "mui/h2-tabs": {
+      "base": "//g.alicdn.com/mui/h2-tabs/4.1.19/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.1.19"
+    },
+    "mui/h2-tabview": {
+      "base": "//g.alicdn.com/mui/h2-tabview/4.0.12/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.0.12"
+    },
+    "mui/h2-toast": {
+      "base": "//g.alicdn.com/mui/h2-toast/4.0.12/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.0.12"
+    },
+    "mui/hybrid": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/hybrid/4.2.24/",
+      "version": "4.2.24"
+    },
+    "mui/jquery": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/jquery/4.0.1/",
+      "version": "4.0.1"
+    },
+    "mui/kissy-polyfill": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/kissy-polyfill/4.0.16/",
+      "version": "4.0.16"
+    },
+    "mui/login": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/login/4.1.16/",
+      "version": "4.1.16"
+    },
+    "mui/md5": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/md5/4.0.1/",
+      "version": "4.0.1"
+    },
+    "mui/minilogin": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/minilogin/4.1.11/",
+      "version": "4.1.11"
+    },
+    "mui/moment": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/moment/4.0.2/",
+      "version": "4.0.2"
+    },
+    "mui/mtb-login": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/mtb-login/4.0.1/",
+      "version": "4.0.1"
+    },
+    "mui/mtb-windvane": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/mtb-windvane/4.0.3/",
+      "version": "4.0.3"
+    },
+    "mui/mtop": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/mtop/4.1.9/",
+      "version": "4.1.9"
+    },
+    "mui/popbox": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/popbox/4.0.6/",
+      "version": "4.0.6"
+    },
+    "mui/prompt": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/prompt/4.0.2/",
+      "version": "4.0.2"
+    },
+    "mui/pull-to-request": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/pull-to-request/4.0.2/",
+      "version": "4.0.2"
+    },
+    "mui/quickbuy": {
+      "base": "//g.alicdn.com/mui/quickbuy/4.1.24/",
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "version": "4.1.24"
+    },
+    "mui/smart-jump": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/smart-jump/4.0.44/",
+      "version": "4.0.44",
+      "weex": true
+    },
+    "mui/tinycart": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/tinycart/4.1.20/",
+      "version": "4.1.20"
+    },
+    "mui/vuejs": {
+      "debug": true,
+      "group": "tm-weex-vue",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/vuejs/4.4.10/",
+      "version": "4.4.10"
+    },
+    "mui/weex-component-link": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "isVue": true,
+      "path": "//g.alicdn.com/mui/weex-component-link/4.1.1/",
+      "version": "4.1.1",
+      "weex": true
+    },
+    "mui/weex-vue-patch": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/weex-vue-patch/4.1.8/",
+      "version": "4.1.8",
+      "weex": true
+    },
+    "mui/weex-zebra-utils": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/weex-zebra-utils/4.1.19/",
+      "version": "4.1.19",
+      "weex": true
+    },
+    "mui/xtemplate": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/xtemplate/4.0.11/",
+      "version": "4.0.11"
+    },
+    "mui/zebra-act-newbanner-th": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "isVue": true,
+      "path": "//g.alicdn.com/mui/zebra-act-newbanner-th/4.1.27/",
+      "version": "4.1.27",
+      "weex": true
+    },
+    "mui/zebra-aself-one": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/zebra-aself-one/4.2.1/",
+      "version": "4.2.1"
+    },
+    "mui/zebra-bf-login": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/zebra-bf-login/4.0.18/",
+      "version": "4.0.18"
+    },
+    "mui/zebra-fcvd": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/zebra-fcvd/4.2.3/",
+      "version": "4.2.3"
+    },
+    "mui/zebra-jinkou-common-coupon": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/zebra-jinkou-common-coupon/4.0.45/",
+      "version": "4.0.45"
+    },
+    "mui/zepto": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/mui/zepto/4.0.9/",
+      "version": "4.0.9"
+    },
+    "zebra-pages/city-pavilion": {
+      "debug": true,
+      "group": "tm",
+      "ignorePackageNameInUri": true,
+      "path": "//g.alicdn.com/zebra-pages/city-pavilion/4.1.61/",
+      "version": "4.1.61"
+    }
+  }
+}

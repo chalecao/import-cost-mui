@@ -14,13 +14,17 @@ const versionsCache = {};
 const failedSize = { size: 0, gzip: 0 };
 let solutionDir, seed;
 function getMuiSize(fileName, name, line) {
+
   let pack = name.split("/")
-
-  solutionDir = solutionDir || parseJson(pkgDir.sync(fileName))["seed"];
-  seed = seed || parseSeedJson(path.join(pkgDir.sync(fileName), solutionDir || "src"))
-
+  if (!name.match(".js")) {
+    pack[pack.length - 1] = pack[pack.length - 1] + ".js"
+  }
+  if (!seed) {
+    solutionDir = parseJson(pkgDir.sync(fileName))["seed"];
+    seed = parseSeedJson(path.join(pkgDir.sync(fileName), solutionDir || "src"))
+  }
   pack.splice(2, 0, seed.packages["mui/" + pack[1]]["version"])
-  // console.log(pack.join("/"))
+  // console.log("/" + pack.join("/"))
   return new Promise((resolve, reject) => {
     http.get({
       host: 'g.alicdn.com',
