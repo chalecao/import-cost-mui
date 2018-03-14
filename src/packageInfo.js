@@ -33,7 +33,7 @@ function getMuiSize(path) {
 export async function getSize(pkg) {
   readSizeCache();
   if (isMUI(pkg.string)) {
-    return getMuiSize(pkg.string)
+    return await getMuiSize(pkg.string)
   } else {
     try {
       versionsCache[pkg.string] = versionsCache[pkg.string] || getPackageVersion(pkg);
