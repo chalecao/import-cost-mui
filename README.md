@@ -2,6 +2,12 @@
 
 thanks to [import cost](https://github.com/wix/import-cost), this repo just add some mui feature.
 
+ps:
+
+1. you should change .babelrc1 to .babelrc to run `npm run test`,
+2. you should change .babelrc to .babelrc1 to run `npm run build`, because rollup conflict
+
+
 ## How to use
 
 ```sh
