@@ -1,7 +1,8 @@
 import { getSize, cleanup as kill } from './packageInfo';
 import { getPackages, TYPESCRIPT as TYPESCRIPT_LANG, JAVASCRIPT as JAVASCRIPT_LANG } from './parser';
 import { EventEmitter } from 'events';
-import { isMUI } from "./utils"
+import { getPackageVersion, parseJson, parseSeedJson, isMUI } from './utils';
+import pkgDir from 'pkg-dir';
 
 export const TYPESCRIPT = TYPESCRIPT_LANG;
 export const JAVASCRIPT = JAVASCRIPT_LANG;
@@ -24,9 +25,11 @@ export function importCost(fileName, text, language) {
       const promises = imports
         .map(packageInfo => {
 
-          if (isMUI(packageInfo.name)) {
-
-            return getSize({ "string": packageInfo.name, "fileName": fileName, "line": packageInfo.line })
+          let uitype = parseJson(pkgDir.sync(fileName))["uitype"];
+          let _type = isMUI(packageInfo.name, uitype)
+          // console.log(uitype)
+          if (_type) {
+            return getSize({ "string": packageInfo.name, "fileName": fileName, "line": packageInfo.line, "uitype": _type })
           } else {
             return getSize(packageInfo)
           }

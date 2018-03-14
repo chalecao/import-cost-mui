@@ -4,7 +4,7 @@ import http from "http"
 import workerFarm from 'worker-farm';
 import pkgDir from 'pkg-dir';
 import { debouncePromise, DebounceError } from './debouncePromise';
-import { getPackageVersion, parseJson, isMUI, parseSeedJson } from './utils';
+import { getPackageVersion, parseJson, parseSeedJson } from './utils';
 
 const workers = workerFarm(require.resolve('./webpack.js'), ['calcSize']);
 const extensionVersion = parseJson(pkgDir.sync(__dirname)).version;
@@ -13,7 +13,7 @@ let sizeCache = {};
 const versionsCache = {};
 const failedSize = { size: 0, gzip: 0 };
 let solutionDir, seed;
-function getMuiSize(fileName, name, line) {
+function getMuiSize(fileName, name, line, uitype) {
 
   let pack = name.split("/")
   if (!name.match(".js")) {
@@ -23,8 +23,8 @@ function getMuiSize(fileName, name, line) {
     solutionDir = parseJson(pkgDir.sync(fileName))["seed"];
     seed = parseSeedJson(path.join(pkgDir.sync(fileName), solutionDir || "src"))
   }
-  pack.splice(2, 0, seed.packages["mui/" + pack[1]]["version"])
-  // console.log("/" + pack.join("/"))
+  pack.splice(2, 0, seed.packages[uitype + "/" + pack[1]]["version"])
+  console.log("/" + pack.join("/"))
   return new Promise((resolve, reject) => {
     http.get({
       host: 'g.alicdn.com',
@@ -44,8 +44,8 @@ function getMuiSize(fileName, name, line) {
 
 export async function getSize(pkg) {
   readSizeCache();
-  if (isMUI(pkg.string)) {
-    return await getMuiSize(pkg.fileName, pkg.string, pkg.line)
+  if (pkg.uitype) {
+    return await getMuiSize(pkg.fileName, pkg.string, pkg.line, pkg.uitype)
   } else {
     try {
       versionsCache[pkg.string] = versionsCache[pkg.string] || getPackageVersion(pkg);

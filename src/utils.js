@@ -34,6 +34,10 @@ export function getPackageJson(pkg) {
   return parseJson(getPackageDirectory(pkg));
 }
 
-export function isMUI(fileName){
-  return fileName.match("mui")
+export function isMUI(fileName, uitype) {
+  let type = "";
+  uitype.split(",").forEach(item => {
+    if (fileName.match(item)) type = item;
+  })
+  return type;
 }
