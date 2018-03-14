@@ -46,8 +46,8 @@ function gzipOf(packages, name) {
 async function test(fileName, pkg = 'chai', minSize = 10000, maxSize = 15000) {
 
   const packages = await whenDone(importCost(fixture(fileName)));
-  // console.log(packages)
-  // console.log(packages[0].size)
+  console.log(packages)
+  console.log(packages[0].size)
   expect(sizeOf(packages, pkg)).to.be.within(minSize, maxSize);
   expect(gzipOf(packages, pkg)).to.be.within(sizeOf(packages, pkg) / 50, sizeOf(packages, pkg) / 1.5);
 }
@@ -71,7 +71,7 @@ describe('importCost', () => {
   // });
 
   it('calculates size of require in javascript', () => test('require.js'));
-  it('calculates size of require in javascript', () => test('mui.js'));
+  it('calculates size of require in javascript', () => test('mui.js','/mui/feloader/4.1.16/feloader-min.js'));
   // it('calculates size of require in typescript', () => test('require.ts'));
   // it('calculates size of template require in javascript', () => test('require-template.js'));
   // it('calculates size of template require in typescript', () => test('require-template.ts'));

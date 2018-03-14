@@ -26,7 +26,7 @@ export function importCost(fileName, text, language) {
 
           if (isMUI(packageInfo.name)) {
 
-            return getSize({ "string": packageInfo.name })
+            return getSize({ "string": packageInfo.name, "fileName":fileName })
           } else {
             return getSize(packageInfo)
           }

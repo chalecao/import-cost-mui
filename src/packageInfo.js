@@ -13,16 +13,16 @@ let sizeCache = {};
 const versionsCache = {};
 const failedSize = { size: 0, gzip: 0 };
 
-function getMuiSize(path) {
+function getMuiSize(fileName, name) {
   return new Promise((resolve, reject) => {
     http.get({
       host: 'g.alicdn.com',
-      path: path
+      path: name
     }, function (response) {
 
       resolve({
-        fileName: path,
-        name: 'chai',
+        fileName: fileName,
+        name: name,
         size: response.headers['content-length'],
         gzip: response.headers['content-length'] / 1.6
       })
@@ -33,7 +33,7 @@ function getMuiSize(path) {
 export async function getSize(pkg) {
   readSizeCache();
   if (isMUI(pkg.string)) {
-    return await getMuiSize(pkg.string)
+    return await getMuiSize(pkg.fileName, pkg.string)
   } else {
     try {
       versionsCache[pkg.string] = versionsCache[pkg.string] || getPackageVersion(pkg);
