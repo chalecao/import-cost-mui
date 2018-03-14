@@ -16,7 +16,7 @@ export function importCost(fileName, text, language) {
 
     try {
       const imports = getPackages(fileName, text, language)
-      .filter(packageInfo => !packageInfo.name.startsWith('.'));
+        .filter(packageInfo => !packageInfo.name.startsWith('.'));
 
       emitter.emit('start', imports);
 
@@ -26,7 +26,7 @@ export function importCost(fileName, text, language) {
 
           if (isMUI(packageInfo.name)) {
 
-            return getSize({ "string": packageInfo.name, "fileName":fileName })
+            return getSize({ "string": packageInfo.name, "fileName": fileName, "line": packageInfo.line })
           } else {
             return getSize(packageInfo)
           }
