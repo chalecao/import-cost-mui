@@ -16,7 +16,7 @@ export function importCost(fileName, text, language) {
 
     try {
       const imports = getPackages(fileName, text, language)
-        .filter(packageInfo => !packageInfo.name.startsWith('.'));
+        .filter(packageInfo => packageInfo.name && !packageInfo.name.startsWith('.'));
 
       emitter.emit('start', imports);
 
