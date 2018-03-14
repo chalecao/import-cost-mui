@@ -8,18 +8,16 @@ import { getPackageVersion, parseJson, isMUI, parseSeedJson } from './utils';
 
 const workers = workerFarm(require.resolve('./webpack.js'), ['calcSize']);
 const extensionVersion = parseJson(pkgDir.sync(__dirname)).version;
-
-const solutionDir = parseJson(__dirname)["seed"];
-const seed = parseSeedJson(path.join(__dirname, solutionDir || "src"))
-
-
 export const cacheFileName = path.join(__dirname, `ic-cache-${extensionVersion}`);
 let sizeCache = {};
 const versionsCache = {};
 const failedSize = { size: 0, gzip: 0 };
-
+let solutionDir, seed;
 function getMuiSize(fileName, name, line) {
   let pack = name.split("/")
+
+  solutionDir = solutionDir || parseJson(pkgDir.sync(fileName))["seed"];
+  seed = seed || parseSeedJson(path.join(pkgDir.sync(fileName), solutionDir || "src"))
 
   pack.splice(2, 0, seed.packages["mui/" + pack[1]]["version"])
   // console.log(pack.join("/"))
