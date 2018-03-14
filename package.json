@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "import-cost-mui",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "",
   "main": "dist/src/index.js",
   "files": [
