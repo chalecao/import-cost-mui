@@ -1,0 +1,59 @@
+{
+  "private": false,
+  "name": "import-cost-mui",
+  "version": "1.3.1",
+  "description": "",
+  "main": "dist/src/index.js",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chalecao/import-cost-mui.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chalecao/import-cost-mui/issues"
+  },
+  "homepage": "https://github.com/chalecao/import-cost-mui#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.5.0",
+    "babili-webpack-plugin": "^0.1.2",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^7.1.1",
+    "haste-preset-yoshi": "latest",
+    "memory-fs": "^0.4.1",
+    "mocha": "^5.0.4",
+    "pkg-dir": "^2.0.0",
+    "rollup": "^0.56.5",
+    "rollup-plugin-babel": "^3.0.3",
+    "tmp": "0.0.31",
+    "typescript": "^2.7.2",
+    "webpack": "^3.11.0",
+    "worker-farm": "^1.6.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.22.0",
+    "babel-types": "^6.25.0",
+    "babylon": "^6.17.4",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "url-loader": "^0.5.9"
+  },
+  "eslintConfig": {
+    "extends": "wix/esnext"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
