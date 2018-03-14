@@ -9,6 +9,7 @@ export default [{
   },
   plugins: [
     babel({
+      runtimeHelpers: true,
       "presets": [
         [
           "env",
@@ -17,6 +18,9 @@ export default [{
           }
         ],
         "stage-3"
+      ],
+      "plugins": [
+        "transform-runtime"
       ]
     })
   ]
