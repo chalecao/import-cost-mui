@@ -21,16 +21,15 @@ export function importCost(fileName, text, language) {
 
       emitter.emit('start', imports);
 
-
+      let uitype = parseJson(pkgDir.sync(fileName))["uitype"] || "mui,tm";
+      let _type
       const promises = imports
         .map(packageInfo => {
-
-          let uitype = parseJson(pkgDir.sync(fileName))["uitype"] || "mui,tm";
-          let _type = isMUI(packageInfo.name, uitype)
+          _type = isMUI(packageInfo.name, uitype)
           // console.log(uitype)
           if (_type) {
             return getSize({ "string": packageInfo.name, "fileName": fileName, "line": packageInfo.line, "uitype": _type })
-          } else {
+          } else if (uitype.indexOf("others")) {
             return getSize(packageInfo)
           }
         })
