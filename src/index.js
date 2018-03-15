@@ -14,15 +14,15 @@ export function cleanup() {
 export function importCost(fileName, text, language) {
   const emitter = new EventEmitter();
   setTimeout(async () => {
-
+    let uitype = parseJson(pkgDir.sync(fileName))["uitype"] || "mui,tm";
+    let _type
     try {
       const imports = getPackages(fileName, text, language)
-        .filter(packageInfo => packageInfo.name && !packageInfo.name.startsWith('.'));
+        .filter(packageInfo => (!!isMUI(packageInfo.name, uitype)) && packageInfo.name && !packageInfo.name.startsWith('.'));
 
       emitter.emit('start', imports);
 
-      let uitype = parseJson(pkgDir.sync(fileName))["uitype"] || "mui,tm";
-      let _type
+
       const promises = imports
         .map(packageInfo => {
           _type = isMUI(packageInfo.name, uitype)
@@ -31,6 +31,8 @@ export function importCost(fileName, text, language) {
             return getSize({ "string": packageInfo.name, "fileName": fileName, "line": packageInfo.line, "uitype": _type })
           } else if (uitype.indexOf("others")) {
             return getSize(packageInfo)
+          } else {
+            return {}
           }
         })
         .map(promise =>
